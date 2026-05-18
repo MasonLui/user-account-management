@@ -1,7 +1,8 @@
 import datetime
 from fasthtml.common import *
 from auth import hash_password, verify_password
-from models import users, NotFoundError
+from fastlite import NotFoundError
+from models import users
 from logger import logger
 
 login_redir = RedirectResponse('/login', status_code=303)

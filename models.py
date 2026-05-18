@@ -1,5 +1,5 @@
 import os
-from fasthtml.common import database, NotFoundError
+from fastlite import database, NotFoundError
 
 os.makedirs('data', exist_ok=True)
 
