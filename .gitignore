@@ -31,19 +31,22 @@ htmlcov/
 .pytest_cache/
 *.xml
 
-# SQLite database files
+# SQLite database files and data directory
 *.db
 *.sqlite
 *.sqlite3
+data/
+
+# Logs
+logs/
 
 # Environment variables
 .env
 .env.*
 !.env.example
 
-# Logs
+# Log files
 *.log
-logs/
 
 # macOS
 .DS_Store

@@ -63,12 +63,38 @@ python cli.py --help
 
 ```
 .
-├── main.py          # App entry point and route definitions
-├── models.py        # User data models and database schema
-├── auth.py          # Password hashing and authentication logic
+├── main.py          # FastHTML app — all routes and UI
+├── models.py        # SQLite schema via MiniDataAPI
+├── auth.py          # bcrypt password hashing and verification
 ├── cli.py           # Command-line admin interface
 ├── logger.py        # Logging configuration
+├── requirements.txt
 └── README.md
+```
+
+### CLI Commands
+
+```bash
+# List all active users
+python cli.py list
+
+# List archived users
+python cli.py list --archived
+
+# Create a new user
+python cli.py create alice alice@example.com s3cur3pass
+
+# Create an admin user
+python cli.py create alice alice@example.com s3cur3pass --admin
+
+# Update a user's password
+python cli.py update-password alice newpassword
+
+# Archive a user
+python cli.py archive alice
+
+# Unarchive a user
+python cli.py unarchive alice
 ```
 
 ---
